@@ -46,7 +46,7 @@ for (( i = $start; i <= $end; ++i )); do
 
         duplicate=`echo $data|jq .duplicate -r`
         # 非重复交易 duplicate 为空 “=null”；重复交易 duplicate=true
-        if [[ $duplicate = ture ]]; then
+        if [[ $duplicate = true ]]; then
             echo "$i $TxID $txsvalid duplicate" >> txlog.txt
             continue
         fi
